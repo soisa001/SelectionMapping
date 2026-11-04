@@ -1,0 +1,14 @@
+# Workbench runtime for the meta-significant and SV-linked/lead locus composites.
+# The SV runner can execute missing Figure 4 SuSiE tasks during --phase all.
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+adjustText>=1.3
+pillow>=10
+pypdf>=5.0
+scikit-allel>=1.3.7
+scipy>=1.10
+polars>=0.20
+pyarrow>=14
+statsmodels>=0.14
+cyvcf2>=0.31; sys_platform != "win32"

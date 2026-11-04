@@ -1,0 +1,40 @@
+# ---------------------------------------------------------------------------
+# Core plotting / data-wrangling stack used by the figure notebooks & scripts.
+# Workbench runtime dependencies.
+# ---------------------------------------------------------------------------
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+PyMuPDF>=1.26    # source-backed PDF composition and vector-output QA
+demes>=0.2.3,<0.3
+demesdraw>=0.4,<0.5
+scipy>=1.10       # cKDTree for the Fig 1D IDW projection
+polars>=0.20      # Figure 4 SuSiE hardmask/GTF processing
+pyarrow>=14       # Polars -> pandas conversion in Figure 4 gene-track loading
+statsmodels>=0.14 # Figure 4 score tests and logistic regression
+scikit-learn>=1.3 # admixture reference PLRS EUR-dosage models
+cyvcf2>=0.31      # indexed marker/genotype extraction for Figures 3 and 4
+geopandas>=0.14   # map panels: US choropleth (1A) + world basemap (1D); shapely + pyproj
+pyyaml>=6.0       # read the Fig 1E demes best-fit model
+scikit-allel>=1.3.7 # EHH / pi from phased VCFs, Figure 3 (Workbench; needs tabix CLI)
+adjustText>=0.8   # Figure 4A PheWAS volcano label de-collision (v2/v3)
+
+# Notebook runtime
+jupyter>=1.0
+ipykernel>=6.0
+nbclient>=0.10    # headless execution in scripts/run_all_figure_notebooks.py
+nbformat>=5.10    # executed-notebook copies and run logs
+
+# admixture reference creates a separate phetk==0.3.3 virtual environment at runtime.
+# PheTK requires NumPy <2, so it must not be installed into this environment.
+
+# ---------------------------------------------------------------------------
+# Additional dependencies for analysis stages.
+# ---------------------------------------------------------------------------
+# pandas-gbq>=0.19       # BigQuery pull for Fig 1C (Workbench only; provides read_gbq)
+# db-dtypes>=1.1         # BigQuery -> pandas dtype support (Workbench only)
+# dadi>=2.2              # demographic inference (Figure 1)
+# msprime>=1.3.3         # coalescent simulation / neutral null (Figure 3)
+# seaborn>=0.13          # optional statistical plotting helpers
+# hail                   # PCA / relatedness / joint calling (external cluster)
+# selscan / rehh         # iHS + EHH (external CLI / R; wrapped, not pip)

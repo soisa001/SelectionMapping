@@ -1,0 +1,20 @@
+# Plotting plus locus-only refresh runtime for Figure 2.
+# This notebook does not need the admixture reference model/PheTK runtime. cyvcf2 is used
+# only on Linux/Workbench to refresh the 100 kb fine-map and phased SV-position
+# nearest-marker ancestry summaries and all corrected discovery-nominal fits.
+# Reuses the corrected cohort loader without rerunning PheTK or PLRS.
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+adjustText>=1.3
+# Shared selection-hit PheWAS renderer also provides PDF composition helpers.
+pypdf>=5.0
+pillow>=10
+scipy>=1.10
+# Read cached PLSR feature metadata during the upstream mask audit.
+scikit-learn>=1.2
+statsmodels>=0.14
+cyvcf2>=0.31; sys_platform != "win32"
+ipykernel>=6.0
+nbclient>=0.10
+nbformat>=5.10

@@ -1,0 +1,7 @@
+# Plot-only environment for committed Supplementary Figure S1 source data.
+# dadi is intentionally omitted so the figure can be redrawn on Windows.
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+demes>=0.2.3,<0.3
+demesdraw>=0.4,<0.5

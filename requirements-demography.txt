@@ -1,0 +1,8 @@
+# Lightweight environment for the saved-fit S1 forward evaluation. It never
+# re-optimizes and does not need the full genotype/geospatial figure stack.
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+dadi>=2.4,<2.5
+demes>=0.2.3,<0.3
+demesdraw>=0.4,<0.5
